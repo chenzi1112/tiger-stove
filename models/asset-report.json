@@ -1,0 +1,46 @@
+[
+  {
+    "variant": "desktop",
+    "path": "public/models/tiger-stove-desktop.glb",
+    "bytes": 5242184,
+    "nodes": [
+      "P01_body_shell",
+      "P02_cooking_rim",
+      "P03_chimney_socket",
+      "P04_door_frame",
+      "P05_relief_surface",
+      "P06_fu",
+      "P07_zeng",
+      "P08_chimney_1",
+      "P09_chimney_2",
+      "P10_chimney_3",
+      "P11_chimney_4",
+      "P12_carrying_chain",
+      "ROOT_tiger_stove"
+    ],
+    "textureMax": 1536,
+    "triangles": 302441
+  },
+  {
+    "variant": "mobile",
+    "path": "public/models/tiger-stove-mobile.glb",
+    "bytes": 2409376,
+    "nodes": [
+      "P01_body_shell",
+      "P02_cooking_rim",
+      "P03_chimney_socket",
+      "P04_door_frame",
+      "P05_relief_surface",
+      "P06_fu",
+      "P07_zeng",
+      "P08_chimney_1",
+      "P09_chimney_2",
+      "P10_chimney_3",
+      "P11_chimney_4",
+      "P12_carrying_chain",
+      "ROOT_tiger_stove"
+    ],
+    "textureMax": 768,
+    "triangles": 114813
+  }
+]
