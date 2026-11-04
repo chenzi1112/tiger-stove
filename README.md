@@ -16,6 +16,9 @@
 - **动手组装页**（`assemble.html`）：把釜、甑、四节烟筒、提链拖到金色位置自动吸附，
   支持点击安装、撤回一步、重新开始，可切换到单件观察模式
 - 细节章可直接深链到组装页的单件视角：`assemble.html?detail=body|fu|zeng|pipe1|pipe2|pipe3|pipe4|chain`
+- 七件归位后触发完成态：金色余烬上浮、模型缓慢自转，并弹出完成卡片
+- 完成卡片可生成 **1080×1440 分享图**（模型实拍渲染 + 标题 + 二维码 + 站点地址），
+  移动端走系统分享面板，桌面端直接下载 PNG
 
 ## 目录
 
@@ -26,7 +29,10 @@ assets/                        构建后的 CSS / JS（含共享的 RoomEnvironm
 models/tiger-stove-desktop.glb 桌面版模型（5.2 MB，约 30 万三角面）
 models/tiger-stove-mobile.glb  移动版模型（2.4 MB，约 11 万三角面）
 models/asset-report.json       模型优化报告
+qr-share.png                   分享图右下角二维码（指向本站首页）
 ```
+
+> 二维码由源码仓库 `public/qr-share.png` 提供；若日后绑定自定义域名，需要重新生成该图。
 
 ## 部署说明
 
