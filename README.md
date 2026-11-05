@@ -37,7 +37,11 @@ models/bird-zun-desktop.glb      5.3 MB   鸟尊桌面版
 models/bird-zun-mobile.glb       3.0 MB   鸟尊移动版
 models/*-asset-report.json                    模型优化报告
 qr-share.png                                  分享图右下角二维码
+og-gallery.jpg / og-tiger.jpg / og-bird.jpg   社交分享封面（1200×630）
 ```
+
+分享封面通过 `og:image` / `twitter:image` 引用，必须写绝对地址；当前写死为
+`https://chenzi1112.github.io/tiger-stove/`，若绑定自定义域名需同步修改三个页面的 meta。
 
 ## 部署说明
 
@@ -47,8 +51,9 @@ qr-share.png                                  分享图右下角二维码
 从源码重新构建时，Vite 需设置 `base: './'`，模型加载路径用 `import.meta.env.BASE_URL` 拼接；
 否则会退化为绝对路径 `/assets/…`，在 `/<repo>/` 子路径下 404。
 
-> 展厅首页会同时加载两件文物的模型（桌面约 10.3 MB）。若想更快，可改成只加载当前选中文物、
-> 切换时再懒加载另一件。
+> 展厅首页按优先级加载：先只下载当前选中文物（桌面约 5 MB），可用后立即渲染，
+> 另一件在第一帧之后空闲预取；开启省流量模式（`navigator.connection.saveData`）时，
+> 另一件完全按需下载，选择到它时才请求。
 
 ## 说明与限制
 
