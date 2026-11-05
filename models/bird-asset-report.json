@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "desktop",
+    "file": "public/models/bird-zun-desktop.glb",
+    "bytes": 5560948,
+    "nodes": [
+      "P01_Body",
+      "P02_Back_Lid",
+      "P03_Tiger_Handle",
+      "P04_Beak_Spout",
+      "P05_Foot_L",
+      "P06_Foot_R",
+      "P07_Tail_Support",
+      "P08_Relief",
+      "ROOT_ZhaoQing_BirdZun"
+    ],
+    "textureMax": 1536,
+    "triangles": 291954
+  },
+  {
+    "variant": "mobile",
+    "file": "public/models/bird-zun-mobile.glb",
+    "bytes": 3103732,
+    "nodes": [
+      "P01_Body",
+      "P02_Back_Lid",
+      "P03_Tiger_Handle",
+      "P04_Beak_Spout",
+      "P05_Foot_L",
+      "P06_Foot_R",
+      "P07_Tail_Support",
+      "P08_Relief",
+      "ROOT_ZhaoQing_BirdZun"
+    ],
+    "textureMax": 768,
+    "triangles": 120408
+  }
+]
