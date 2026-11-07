@@ -2,7 +2,7 @@
   {
     "variant": "desktop",
     "path": "public/models/tiger-stove-desktop.glb",
-    "bytes": 5242184,
+    "bytes": 4708864,
     "nodes": [
       "P01_body_shell",
       "P02_cooking_rim",
@@ -19,12 +19,12 @@
       "ROOT_tiger_stove"
     ],
     "textureMax": 1536,
-    "triangles": 302441
+    "triangles": 274836
   },
   {
     "variant": "mobile",
     "path": "public/models/tiger-stove-mobile.glb",
-    "bytes": 2409376,
+    "bytes": 2203636,
     "nodes": [
       "P01_body_shell",
       "P02_cooking_rim",
@@ -41,6 +41,6 @@
       "ROOT_tiger_stove"
     ],
     "textureMax": 768,
-    "triangles": 114813
+    "triangles": 105164
   }
 ]

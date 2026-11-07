@@ -1,0 +1,1 @@
+var e={roots:[{p:[-.55,0,.1],s:.9,yaw:.03},{p:[0,.035,-.16],s:1,yaw:0},{p:[.55,0,.07],s:.9,yaw:-.04}],center:[0,.5,0],shift:.52,vertical:-.02,zoom:.8,elevation:.15};function t(t){[`A`,`B`,`C`].forEach((n,r)=>{let i=t.getObjectByName(`ROOT_Guardian_`+n),a=e.roots[r];i&&(i.position.fromArray(a.p),i.scale.setScalar(a.s),i.rotation.set(0,a.yaw,0))})}export{t as n,e as t};

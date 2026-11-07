@@ -1,6 +1,6 @@
 # 晋阳考古・数字展厅
 
-两件春秋青铜器的三维数字专题：**虎形灶**（赵卿墓，随行炊具）与 **鸟尊**（青铜凝羽，一尊生姿）。
+三件文物的三维数字专题：**虎形灶**（春秋・赵卿墓）、**鸟尊**（青铜凝羽）、**镇墓兽**（北齐・陶塑三件）。 
 
 线上地址：<https://chenzi1112.github.io/tiger-stove/>
 
@@ -8,12 +8,14 @@
 
 | 页面 | 内容 |
 | --- | --- |
-| `index.html` | 数字展厅首页：三维文物转盘，拖动或点击切换虎形灶 / 鸟尊，进入对应专题 |
+| `index.html` | 数字展厅首页：三维文物转盘，拖动或点击切换虎形灶 / 鸟尊 / 镇墓兽，进入对应专题 |
 | `tiger.html` | 虎形灶专题：六章滚动叙事 + 可拆解三维模型 + 自由观察 |
 | `bird.html` | 鸟尊专题：六章滚动叙事 + 三维模型 + 细节观察 |
+| `guardians.html` | 镇墓兽专题：三件北齐陶塑的形制、彩绘与护佑寓意 |
 | `assemble.html` | 动手组装：把釜、甑、四节烟筒、提链拖到金色位置吸附安装 |
 
-展厅与专题之间通过 `?select=tiger|bird`、`?from=gallery` 传递当前选中的文物，返回展厅时保持选中状态。
+展厅与专题之间通过 `?select=tiger|bird|guardians`、`?from=gallery` 传递当前选中的文物，
+返回展厅时保持选中状态。
 
 ## 交互要点
 
@@ -28,20 +30,22 @@
 ## 目录
 
 ```
-index.html / tiger.html / bird.html / assemble.html   四个页面
-assets/                                               构建后的 CSS / JS（按页面与共享模块分包）
-bird/chain.webp, bird/handle.webp                     鸟尊细节图
-models/tiger-stove-desktop.glb   5.0 MB   虎形灶桌面版
-models/tiger-stove-mobile.glb    2.3 MB   虎形灶移动版
+index.html / tiger.html / bird.html / guardians.html / assemble.html   五个页面
+assets/                                              构建后的 CSS / JS（按页面与共享模块分包）
+bird/*.webp, guardians/*.webp                        鸟尊与镇墓兽的细节图
+models/tiger-stove-desktop.glb   4.5 MB   虎形灶桌面版
+models/tiger-stove-mobile.glb    2.1 MB   虎形灶移动版
 models/bird-zun-desktop.glb      5.3 MB   鸟尊桌面版
 models/bird-zun-mobile.glb       3.0 MB   鸟尊移动版
+models/guardians-desktop.glb    11.0 MB   镇墓兽桌面版（三件合并）
+models/guardians-mobile.glb      6.1 MB   镇墓兽移动版
 models/*-asset-report.json                    模型优化报告
 qr-share.png                                  分享图右下角二维码
-og-gallery.jpg / og-tiger.jpg / og-bird.jpg   社交分享封面（1200×630）
+og-gallery.jpg / og-tiger.jpg / og-bird.jpg / og-guardians.jpg   社交分享封面（1200×630）
 ```
 
 分享封面通过 `og:image` / `twitter:image` 引用，必须写绝对地址；当前写死为
-`https://chenzi1112.github.io/tiger-stove/`，若绑定自定义域名需同步修改三个页面的 meta。
+`https://chenzi1112.github.io/tiger-stove/`，若绑定自定义域名需同步修改四个页面的 meta。
 
 ## 部署说明
 
@@ -51,12 +55,12 @@ og-gallery.jpg / og-tiger.jpg / og-bird.jpg   社交分享封面（1200×630）
 从源码重新构建时，Vite 需设置 `base: './'`，模型加载路径用 `import.meta.env.BASE_URL` 拼接；
 否则会退化为绝对路径 `/assets/…`，在 `/<repo>/` 子路径下 404。
 
-> 展厅首页按优先级加载：先只下载当前选中文物（桌面约 5 MB），可用后立即渲染，
-> 另一件在第一帧之后空闲预取；开启省流量模式（`navigator.connection.saveData`）时，
-> 另一件完全按需下载，选择到它时才请求。
+> 展厅首页按优先级加载：先只下载当前选中文物，可用后立即渲染，其余文物在第一帧之后空闲预取；
+> 开启省流量模式（`navigator.connection.saveData`）时完全按需下载。
+> 三件桌面模型合计约 20.8 MB，弱网下首屏只等其中一件（约 5 MB）。
 
 ## 说明与限制
 
 按参考图与项目模型制作，比例与未见表面存在推定，不代表实测复原；纹饰细节与设计稿存在差异。
 组装页的吸附位置由现有模型接口自动推导，仅作组合关系示意，非考古装配规程。
-资料线索：晋阳古城考古博物馆展陈、赵卿墓出土文物。
+资料线索：晋阳古城考古博物馆展陈、赵卿墓出土文物、北齐陶塑镇墓兽。
