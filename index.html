@@ -17,15 +17,34 @@
 <meta name="twitter:title" content="晋阳考古・数字展厅">
 <meta name="twitter:description" content="转动之间，遇见晋阳。春秋青铜与北齐陶塑，在三维文物之间开启探索。">
 <meta name="twitter:image" content="https://chenzi1112.github.io/tiger-stove/og-gallery.jpg">
-
-  <script type="module" crossorigin src="./assets/main-T-nFOG8W.js"></script>
+<script>document.documentElement.classList.add('has-js');if(!['tiger','bird','guardians'].includes(new URLSearchParams(location.search).get('select')))document.documentElement.classList.add('welcome-pending');</script>
+<link rel="preload" href="./welcome-art.webp" as="image" type="image/webp">
+<style>html{background:#0b1514}#welcome{display:none}.welcome-pending #welcome,.welcome-revealing #welcome{z-index:50;color:#ede5d5;background:#0b1514;display:grid;position:fixed;inset:0;overflow:auto}.welcome-pending .gallery-header,.welcome-pending #collection{visibility:hidden}.welcome-pending body,.welcome-revealing body{overflow:hidden}</style>
+  <script type="module" crossorigin src="./assets/main-BXU7AIxR.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/RoomEnvironment-BuTPx0qx.js">
   <link rel="modulepreload" crossorigin href="./assets/museum-lighting-BMyw2q5t.js">
   <link rel="modulepreload" crossorigin href="./assets/guardian-layout-fktwi5FC.js">
   <link rel="stylesheet" crossorigin href="./assets/museum-lighting-CAwsg_OT.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-Csje0Hnk.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-B5bSTiLa.css">
 </head>
 <body>
+<section id="welcome" aria-labelledby="welcome-title">
+  <header class="welcome-header"><p class="welcome-brand"><span>晋阳考古</span>・数字展厅</p><span class="welcome-edition">三维文物 · 交互展厅</span></header>
+  <div class="welcome-layout">
+    <div class="welcome-copy"><p class="welcome-eyebrow"><i aria-hidden="true"></i> 穿越时光的相遇</p><h1 id="welcome-title">一眼千年<br><span>触见晋阳</span></h1><p class="welcome-description">从春秋青铜，到北齐陶塑。<br>转动展台，走近文物的形与意。</p></div>
+    <figure class="welcome-art"><img src="./welcome-art.webp" alt="虎形灶、鸟尊与三件镇墓兽的展厅艺术主视觉" width="1055" height="820" fetchpriority="high"><figcaption>器物有形，岁月有声</figcaption></figure>
+    <div class="welcome-loading">
+      <div class="welcome-progress-heading"><p id="welcome-message" role="status" aria-live="polite">正在准备三组文物</p><span id="welcome-percent" aria-hidden="true">0<span>%</span></span></div>
+      <div id="welcome-progress" class="welcome-track" role="progressbar" aria-label="展厅准备进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+      <ul class="welcome-assets" aria-label="文物准备状态"><li data-welcome-asset="tiger"><span class="welcome-asset-mark" aria-hidden="true">01</span><span>虎形灶<small>等待载入</small></span></li><li data-welcome-asset="bird"><span class="welcome-asset-mark" aria-hidden="true">02</span><span>鸟尊<small>等待载入</small></span></li><li data-welcome-asset="guardians"><span class="welcome-asset-mark" aria-hidden="true">03</span><span>镇墓兽<small>等待载入</small></span></li></ul>
+      <button id="welcome-enter" disabled>正在准备文物<span aria-hidden="true">⟶</span></button>
+      <button id="welcome-retry" hidden>重试未完成的文物 ↻</button>
+      <p id="welcome-note" class="welcome-note">文物准备好后，即可开启探索</p>
+      <details class="welcome-reading"><summary>先阅读文物专题</summary><div><a href="./tiger.html">虎形灶 ↗</a><a href="./bird.html">鸟尊 ↗</a><a href="./guardians.html">镇墓兽 ↗</a></div></details>
+    </div>
+  </div>
+  <footer class="welcome-footer"><span>晋阳文物 · 数字探索</span><span>以一器之微，见千年之远</span></footer>
+</section>
 <header class="gallery-header"><a class="gallery-brand" href="./index.html"><span>晋阳考古</span>・数字展厅</a><nav aria-label="展厅导航"><a href="#collection" aria-current="page">文物转盘</a><button id="workshop-open">互动工坊</button><button id="about-open">关于展厅</button></nav></header>
 <main id="collection">
 <div class="gallery-atmosphere" aria-hidden="true"></div>
