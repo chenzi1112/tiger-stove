@@ -20,12 +20,12 @@
 <script>document.documentElement.classList.add('has-js');if(!['tiger','bird','guardians'].includes(new URLSearchParams(location.search).get('select')))document.documentElement.classList.add('welcome-pending');</script>
 <link rel="preload" href="./welcome-art.webp" as="image" type="image/webp">
 <style>html{background:#0b1514}#welcome{display:none}.welcome-pending #welcome,.welcome-revealing #welcome{z-index:50;color:#ede5d5;background:#0b1514;display:grid;position:fixed;inset:0;overflow:auto}.welcome-pending .gallery-header,.welcome-pending #collection{visibility:hidden}.welcome-pending body,.welcome-revealing body{overflow:hidden}</style>
-  <script type="module" crossorigin src="./assets/main-BXU7AIxR.js"></script>
+  <script type="module" crossorigin src="./assets/main-a6lCAos8.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/RoomEnvironment-BuTPx0qx.js">
   <link rel="modulepreload" crossorigin href="./assets/museum-lighting-BMyw2q5t.js">
   <link rel="modulepreload" crossorigin href="./assets/guardian-layout-fktwi5FC.js">
   <link rel="stylesheet" crossorigin href="./assets/museum-lighting-CAwsg_OT.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-B5bSTiLa.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-DNqi5KdE.css">
 </head>
 <body>
 <section id="welcome" aria-labelledby="welcome-title">
@@ -40,6 +40,7 @@
       <button id="welcome-enter" disabled>正在准备文物<span aria-hidden="true">⟶</span></button>
       <button id="welcome-retry" hidden>重试未完成的文物 ↻</button>
       <p id="welcome-note" class="welcome-note">文物准备好后，即可开启探索</p>
+      <button id="welcome-skip" class="welcome-skip" type="button">跳过等待，先逛展厅 ⟶</button>
       <details class="welcome-reading"><summary>先阅读文物专题</summary><div><a href="./tiger.html">虎形灶 ↗</a><a href="./bird.html">鸟尊 ↗</a><a href="./guardians.html">镇墓兽 ↗</a></div></details>
     </div>
   </div>
