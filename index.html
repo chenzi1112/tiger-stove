@@ -20,6 +20,7 @@
 <script>document.documentElement.classList.add('has-js');if(!['tiger','bird','guardians'].includes(new URLSearchParams(location.search).get('select')))document.documentElement.classList.add('welcome-pending');</script>
 <link rel="preload" href="./welcome-art.webp" as="image" type="image/webp">
 <style>html{background:#0b1514}#welcome{display:none}.welcome-pending #welcome,.welcome-revealing #welcome{z-index:50;color:#ede5d5;background:#0b1514;display:grid;position:fixed;inset:0;overflow:auto}.welcome-pending .gallery-header,.welcome-pending #collection{visibility:hidden}.welcome-pending body,.welcome-revealing body{overflow:hidden}</style>
+<script>if("serviceWorker" in navigator && self.isSecureContext)addEventListener("load", function(){navigator.serviceWorker.register("./sw.js").catch(function(){})});</script>
   <script type="module" crossorigin src="./assets/main-a6lCAos8.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/RoomEnvironment-BuTPx0qx.js">
   <link rel="modulepreload" crossorigin href="./assets/museum-lighting-BMyw2q5t.js">

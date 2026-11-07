@@ -55,6 +55,14 @@ og-bird-game.jpg / og-guardians-game.jpg                                   小�
 分享封面通过 `og:image` / `twitter:image` 引用，必须写绝对地址；当前写死为
 `https://chenzi1112.github.io/tiger-stove/`，若绑定自定义域名需同步修改四个页面的 meta。
 
+## 加载与缓存
+
+- `sw.js`：Service Worker。静态产物（`/assets/*` 带哈希）走 cache-first；模型与图片走
+  stale-while-revalidate（换模型后下次访问自动更新）；页面走 network-first（发版即可见）。
+- 首次访问仍要下模型：桌面端三件合计约 20 MB，移动端约 11 MB。欢迎页可「跳过等待」。
+- 回访（含站内跨页）命中 SW 缓存后不再重复下载模型，第二次进入接近瞬时。
+- 若需强制刷新全部缓存，把 `public/sw.js` 里的 `VERSION` 加一后重新构建部署。
+
 ## 部署说明
 
 本仓库为构建产物的静态托管，GitHub Pages 从 `main` 分支根目录发布，页面内资源全部使用相对路径
