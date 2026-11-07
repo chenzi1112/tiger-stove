@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1514"><meta name="description" content="旋转赵卿鸟尊，循线索寻找羽纹、提梁、器盖与鸟首，完成文物细节探索。"><title>鸟尊 · 寻纹识器 — 晋阳考古</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="晋阳考古・互动工坊">
+<meta property="og:title" content="鸟尊 · 寻纹识器 — 晋阳考古">
+<meta property="og:description" content="旋转赵卿鸟尊，循线索寻找羽纹、提梁、器盖与鸟首，完成文物细节探索。">
+<meta property="og:url" content="https://chenzi1112.github.io/tiger-stove/bird-game.html">
+<meta property="og:image" content="https://chenzi1112.github.io/tiger-stove/og-bird-game.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="鸟尊 · 寻纹识器 — 晋阳考古">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="鸟尊 · 寻纹识器 — 晋阳考古">
+<meta name="twitter:description" content="旋转赵卿鸟尊，循线索寻找羽纹、提梁、器盖与鸟首，完成文物细节探索。">
+<meta name="twitter:image" content="https://chenzi1112.github.io/tiger-stove/og-bird-game.jpg">
+  <script type="module" crossorigin src="./assets/birdGame-s0zli9R8.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/RoomEnvironment-BuTPx0qx.js">
+  <link rel="modulepreload" crossorigin href="./assets/museum-lighting-BMyw2q5t.js">
+  <link rel="modulepreload" crossorigin href="./assets/OrbitControls-BVcM8wOl.js">
+  <link rel="modulepreload" crossorigin href="./assets/game-scene-D8t7cpko.js">
+  <link rel="stylesheet" crossorigin href="./assets/museum-lighting-CAwsg_OT.css">
+  <link rel="stylesheet" crossorigin href="./assets/game-scene-DxOSDdRO.css">
+</head><body>
+<a class="skip" href="#game-panel">跳至游戏线索</a>
+<header><a class="brand" href="./index.html?select=bird"><span>晋阳考古</span>・互动工坊</a><nav aria-label="游戏导航"><a class="other-game" href="./guardians-game.html">镇墓兽游戏 ↗</a><a href="./bird.html#detail">返回鸟尊专题 ↗</a></nav></header>
+<main class="game-shell"><div class="intro"><div><p class="eyebrow">01 / 观物小游戏 · 鸟尊</p><h1>寻纹识器</h1><p>循一条线索，寻一处匠心。让目光走进青铜的细节。</p></div><div class="score" aria-label="探索进度"><strong id="score">0</strong><span> / 4 处</span><div class="score-track"><i id="score-bar"></i></div></div></div>
+<div class="game-layout"><div class="stage-wrap"><div class="game-stage" aria-label="鸟尊三维观察区"><div class="atmosphere" aria-hidden="true"></div><canvas aria-label="青铜鸟尊；开启旋转后可拖动观察"></canvas><div class="stage-caption">真实三维文物 · 点击金色序号寻找细节</div><div class="pins" id="pins"></div><div class="loading" role="status"><span class="load-text">正在载入文物</span><progress max="1" value="0" aria-label="模型加载进度"></progress><button class="retry" hidden>重新加载</button></div></div><div class="stage-tools"><div class="tool-buttons"><button class="subtle" id="rotate" aria-pressed="false">开启旋转 ↻</button><button class="subtle" id="reset-view">还原视角</button></div><p class="gesture" id="gesture">先读线索，再选择对应部位</p></div></div>
+<aside class="game-panel" id="game-panel" aria-label="寻纹识器游戏"><div class="panel-kicker"><span id="round">线索 01</span><span>寻找 · 发现 · 认识</span></div><h2 id="clue-title">层层相叠，铸铜为羽</h2><p class="clue" id="clue"></p><p class="mini-label">点击模型序号，或直接选择下方部位</p><div class="answer-grid" id="answers" aria-label="选择观察部位"></div><div class="feedback" id="feedback" role="status" aria-live="polite"><p>不计时，也不扣分。每一次观察，都是新的发现。</p></div><div class="panel-actions"><button class="subtle" id="hint">给我提示</button><button class="primary" id="next" disabled>下一条线索 ⟶</button></div><a href="./bird.html#detail" class="text-link">回到专题，细看摄影参考 ↗</a></aside></div>
+<div class="found-strip" id="found-strip" aria-label="已发现的细节"></div></main>
+<footer><span>晋阳考古・鸟尊互动工坊　<a href="./guardians-game.html">镇墓兽游戏 ↗</a></span><span>沿用已有数字模型；纹饰存在简化，细节可结合专题实拍观察。</span></footer>
+<dialog id="completion" aria-labelledby="completion-title"><button class="close" aria-label="关闭完成提示">×</button><p class="eyebrow">探索完成 · 4 / 4</p><div class="completion-emblem" aria-hidden="true">观物入微</div><h2 id="completion-title">一羽一纹，皆有匠心</h2><p>你找到了羽纹、提梁、器盖与鸟首。器用与审美，在一尊青铜中相遇。</p><div class="dialog-actions"><a class="primary" href="./bird.html#detail">继续看文物 ⟶</a><button class="subtle" id="replay">再玩一次</button></div></dialog>
+<noscript>请启用 JavaScript 游玩，或<a href="./bird.html#detail">返回鸟尊专题阅读介绍</a>。</noscript></body></html>
